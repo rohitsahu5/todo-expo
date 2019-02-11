@@ -1,0 +1,83 @@
+.blob {
+  padding: 12px;
+  border-radius: 8px;
+  margin: 10px;
+}
+.blob.active {
+  background-color: #e7c092;
+}
+.blob.done {
+  background-color: lightgreen;
+}
+.blob.action {
+  background-color: #f0bdff;
+  cursor: pointer;
+  font-weight: bold;
+}
+.blob-head {
+  display: flex;
+}
+.blob-action {
+  color: darkblue;
+  cursor: pointer;
+  padding-left: 3px;
+  font-weight: 600;
+  float: right;
+}
+.blob-title {
+  margin-right: auto;
+  font-weight: bold;
+}
+.blob-disc {
+  font-size: 14px;
+  font-weight: 300;
+  padding-top: 10px;
+}
+.blob-status {
+  font-weight: bold;
+  font-size: 14px;
+  padding-top: 10px;
+}
+.blob-edit {
+  display: none;
+}
+.blob-text {
+  border: 0px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  width: calc(100% - 20px);
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #00000024;
+}
+.blob-text::placeholder {
+  color: black;
+}
+.blob-text.area {
+  font-weight: 500;
+  margin-top: 10px;
+}
+.blob-inner-button {
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+}
+.blob-bottom {
+  margin-top: 10px;
+  display: flex;
+  width: calc(100% + 23px);
+  left: -11px;
+  text-align: center;
+  bottom: -11px;
+  position: relative;
+  height: 30px;
+  border-top: 1px solid black;
+}
+.blob-bottom div {
+  width: 50%;
+  padding-top: 5px;
+  cursor: pointer;
+}
+.one {
+  border-right: 1px solid black;
+}

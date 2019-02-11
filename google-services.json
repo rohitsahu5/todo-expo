@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "831538578893",
+    "firebase_url": "https://todo-afb4a.firebaseio.com",
+    "project_id": "todo-afb4a",
+    "storage_bucket": "todo-afb4a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831538578893:android:eb0eded9289f7b47",
+        "android_client_info": {
+          "package_name": "com.RRR.todoexpo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "831538578893-74b8p5e6o767visji3j6hdhv22733a8m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeI5mG_i8_PevYherVvCHv4wEaVSMJ3rM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
