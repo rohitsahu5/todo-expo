@@ -7,7 +7,7 @@ import store from "./js/store/index";
 import { Provider } from "react-redux";
 import { Router, Scene } from "react-native-router-flux";
 import { StatusBar } from "react-native";
-
+import registerForPushNotificationsAsync from "./notificationinit";
 export default class App extends Component {
   render() {
     return (
@@ -31,5 +31,6 @@ export default class App extends Component {
 
   componentDidMount() {
     StatusBar.setHidden(true);
+    registerForPushNotificationsAsync();
   }
 }
