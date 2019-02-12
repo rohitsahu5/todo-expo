@@ -7,6 +7,9 @@ import store from "./js/store/index";
 import { Provider } from "react-redux";
 import { Router, Scene } from "react-native-router-flux";
 import { StatusBar } from "react-native";
+import { Notifications } from "expo";
+import { SingleTask } from "./components/SingleTask";
+import { Actions } from "react-native-router-flux";
 import registerForPushNotificationsAsync from "./notificationinit";
 export default class App extends Component {
   render() {
@@ -23,6 +26,12 @@ export default class App extends Component {
               component={Active}
               title="Active"
             />
+            <Scene
+              key="SingleTask"
+              hideNavBar="true"
+              component={SingleTask}
+              title="View Task"
+            />
           </Scene>
         </Router>
       </Provider>
@@ -30,7 +39,13 @@ export default class App extends Component {
   }
 
   componentDidMount() {
+    console.log("aa");
     StatusBar.setHidden(true);
     registerForPushNotificationsAsync();
+    Notifications.addListener(receivedNotification => {
+      console.log(receivedNotification);
+      if (receivedNotification.origin === "selected")
+        Actions.SingleTask({ id: receivedNotification.data.id });
+    });
   }
 }

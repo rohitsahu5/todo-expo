@@ -17,7 +17,7 @@ exports.handleAddTask = functions.firestore
         return data.docs.forEach(element => {
           let token = element.data().token;
           if (!Expo.isExpoPushToken()) {
-            console.error(`Push token ${token} is not a valid Expo push token`);
+            console.log(`Push token ${token} is not a valid Expo push token`);
           }
           messages.push({
             to: token,
@@ -32,7 +32,7 @@ exports.handleAddTask = functions.firestore
         var sendPromises = chunks.map(chunk => {
           return expo.sendPushNotificationsAsync(chunk);
         });
-        return sendPromises.all();
+        return Promise.all(sendPromises);
       })
       .then(() => {
         return Promise.resolve();
