@@ -12,6 +12,12 @@ import { SingleTask } from "./components/SingleTask";
 import { Actions } from "react-native-router-flux";
 import registerForPushNotificationsAsync from "./notificationinit";
 export default class App extends Component {
+  componentWillMount(){
+    Notifications.presentLocalNotificationAsync({
+      title: 'Welcome!',
+      body: 'Welcome to the todo app!'
+    })
+  }
   render() {
     return (
       <Provider store={store}>
@@ -40,7 +46,7 @@ export default class App extends Component {
 
   componentDidMount() {
     console.log("aa");
-    StatusBar.setHidden(true);
+    // StatusBar.setHidden(true);
     registerForPushNotificationsAsync();
     Notifications.addListener(receivedNotification => {
       console.log(receivedNotification);
